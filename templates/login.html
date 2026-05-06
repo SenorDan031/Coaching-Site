@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}User Login{% endblock %}
+
+{% block BODY %}
+
+<div class="auth-wrapper">
+  <div class="auth-card">
+
+    <a href="/" class="back-btn">← Go Back</a>
+
+    <h2>{{ User_role|title if User_role else "User" }} Login</h2>
+
+    <form method="POST">
+
+      <input type="email" name="User_email" class="form-control" placeholder="Email" required>
+
+      <input type="password" name="User_pass" class="form-control" placeholder="Password" required>
+
+      <button class="btn btn-primary">Login</button>
+
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

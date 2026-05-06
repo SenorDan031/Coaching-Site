@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Role | S++ Academy</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+
+        /* RESET */
+        body{
+            margin:0;
+            height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            font-family:'Segoe UI', sans-serif;
+
+            background: linear-gradient(
+                135deg,
+                #4b0082,
+                #6a11cb,
+                #2575fc
+            );
+
+            background-size:400% 400%;
+            animation:bgMove 12s ease infinite;
+
+            overflow:hidden;
+        }
+
+        /* Animated gradient */
+        @keyframes bgMove{
+            0%{
+                background-position:0% 50%;
+            }
+
+            50%{
+                background-position:100% 50%;
+            }
+
+            100%{
+                background-position:0% 50%;
+            }
+        }
+
+        /* Main box */
+        .role-container{
+
+            width:420px;
+
+            padding:40px;
+
+            border-radius:20px;
+
+            background:rgba(255,255,255,0.12);
+
+            backdrop-filter:blur(14px);
+
+            box-shadow:
+            0 8px 32px rgba(0,0,0,0.25);
+
+            text-align:center;
+
+            color:white;
+        }
+
+        .role-container h1{
+            margin-bottom:10px;
+            font-weight:700;
+        }
+
+        .role-container p{
+            opacity:0.85;
+            margin-bottom:35px;
+        }
+
+        /* Role cards */
+        .role-card{
+
+            display:flex;
+            align-items:center;
+            justify-content:center;
+
+            text-decoration:none;
+
+            width:100%;
+
+            padding:18px;
+
+            margin-bottom:18px;
+
+            border-radius:14px;
+
+            font-size:18px;
+            font-weight:600;
+
+            color:white;
+
+            background:rgba(255,255,255,0.12);
+
+            border:1px solid rgba(255,255,255,0.15);
+
+            transition:0.3s ease;
+        }
+
+        .role-card:hover{
+
+            transform:translateY(-4px) scale(1.02);
+
+            background:rgba(255,255,255,0.2);
+
+            color:white;
+        }
+
+        /* Go Back */
+        .back-btn{
+
+            display:inline-block;
+
+            margin-top:15px;
+
+            text-decoration:none;
+
+            color:#e0d4ff;
+
+            transition:0.3s;
+        }
+
+        .back-btn:hover{
+            color:white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="role-container">
+
+        <h1>Choose Your Role</h1>
+
+        <p>Select how you want to continue into the portal</p>
+
+        <!-- STUDENT -->
+        <a href="/select-role/student" class="role-card">
+            👨‍🎓 Student
+        </a>
+
+        <!-- TEACHER -->
+        <a href="/select-role/teacher" class="role-card">
+            👨‍🏫 Teacher
+        </a>
+
+        <!-- ADMIN -->
+        <a href="/select-role/admin" class="role-card">
+            ⚙️ Admin
+        </a>
+
+        <!-- GO BACK -->
+        <a href="/" class="back-btn">
+            ← Go Back
+        </a>
+
+    </div>
+
+</body>
+</html>

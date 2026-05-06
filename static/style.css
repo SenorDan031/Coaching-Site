@@ -1,0 +1,230 @@
+/* Reset */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+
+    /* animated gradient */
+    background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+/* AUTH PAGES */
+.auth-page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Card */
+/* 🔒 AUTH PAGE OVERRIDE (SAFE) */
+.auth-wrapper {
+    position: fixed;
+    z-index: 9000;   /* 👈 lower than popup */
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    z-index: 9999;
+}
+
+/* Card */
+.auth-card {
+    position: relative;   /* 👈 IMPORTANT */
+
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    width: 350px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+/* Inputs */
+.auth-card input {
+    margin-bottom: 15px;
+}
+
+/* Button */
+.auth-card button {
+    width: 100%;
+}/* Gradient animation */
+
+/* Go Back Button */
+.back-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    font-size: 14px;
+    text-decoration: none;
+    color: #6a11cb;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    color: #2575fc;
+    transform: translateX(-3px);
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+/* SIDEBAR */
+.side-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 220px;
+    height: 100vh;
+
+    background: linear-gradient(180deg, #3b0a75, #4a0f8a);
+    padding: 30px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 9999;
+}
+
+/* Sidebar text */
+.brand {
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Flash message positioning */
+.flash-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10001;
+    width: 300px;
+}
+.flash-container .alert {
+    animation: slideIn 0.4s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Sidebar links */
+.side-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.side-nav a:hover {
+    transform: translateX(6px);
+    color: #cdb4ff;
+}
+
+/* Register button */
+.register-btn {
+    margin-top: auto;
+    background: white;
+    color: black !important;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* MAIN CONTENT */
+.main-content {
+    margin-left: 220px;
+    padding: 60px;
+}
+
+/* SECTION */
+.section {
+    text-decoration-color: aliceblue;
+    text-decoration-thickness: 2px;
+    text-decoration-style: solid;
+    color: antiquewhite;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* HERO */
+.hero-section {
+    text-align: center;
+    color: white;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+}
+
+/* Make invalid feedback visible even without form-group wrappers */
+.invalid-feedback.d-block {
+    margin-top: -8px;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+/* HEADINGS */
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* TEXT */
+.section p {
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+/* TEACHERS GRID */
+.teacher-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* TEACHER CARD */
+.teacher-card {
+    background: rgb(13, 101, 216);
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 250px;
+    flex: 1;
+    transition: 0.3s;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+}

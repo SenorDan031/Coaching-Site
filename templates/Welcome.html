@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block BODY %}
+
+<!-- SIDEBAR -->
+<div class="side-nav">
+    <h3 class="brand">🎓 S++</h3>
+
+    <a href="#hero">Home</a>
+    <a href="#about">About</a>
+    <a href="#teachers">Teachers</a>
+    <a href="#contact">Contact</a>
+
+    <a href="/signup" class="register-btn">Register</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+
+    <!-- HERO -->
+    <section id="hero" class="section hero-section">
+        <div class="hero-content">
+            <h1>Welcome to S++ Academy</h1>
+            <p>Where excellence meets guidance</p>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="teacher-card">
+        <p>
+            S++ Academy is dedicated to shaping future toppers with expert faculty,
+            structured learning, and performance-driven strategies.
+
+            Here in S++ Academy, we provide students with 20+ years of teaching experience teachers, specialized in Physics, Chemistry, Maths, Biology and many other subjects.
+            On top of that, our mentors are ready to provide 24x7 support to our dear students. We are committed to helping students achieve their academic goals and excel in their studies.
+
+            Our academy offers comprehensive coaching programs, personalized attention, and a supportive learning environment to ensure that every student reaches their full potential.
+
+            Become a part of S++ Academy and embark on a journey of academic excellence and success!
+            <hr>
+        </p>
+        </div>
+    </section>
+
+    <!-- TEACHERS -->
+    <section id="teachers" class="section">
+        <h2>Our Prestigious Teachers</h2>
+
+        <div class="teacher-grid">
+            <div class="teacher-card">
+                <h5>Mr. Sachin Kumar</h5>
+                <p>Physics Expert</p>
+            </div>
+
+            <div class="teacher-card">
+                <h5>Mr. Hemant Kumar</h5>
+                <p>Mathematics Specialist</p>
+            </div>
+
+            <div class="teacher-card">
+                <h5>Ms. Priyanka Yadav</h5>
+                <p>Chemistry Expert</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: support@sacademy.com</p>
+        <p>Phone: +91 XXXXX XXXXX</p>
+    </section>
+
+</div>
+
+{% endblock %}

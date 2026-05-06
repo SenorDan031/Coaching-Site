@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title> {% block title %}   {% endblock title %} @A1 Coaching </title>
+    <hr style="opacity: 0.2;">
+</head>
+
+<body class="{% block body_class %}{% endblock %}">
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background: rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
+  <div class="container">
+    
+    <a class="navbar-brand fw-bold" href="/">🎓 S++ Academy</a>
+
+    <div>
+      <a href="/login" class="btn btn-outline-light me-2">Login</a>
+      <a href="/signup" class="btn btn-light">Sign Up</a>
+    </div>
+
+  </div>
+</nav>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-container">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+              {{ message }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block BODY %}
+        
+    {% endblock BODY %}
+
+    <script>
+const sections = document.querySelectorAll('.section-card');
+
+window.addEventListener('scroll', () => {
+  sections.forEach(section => {
+    const top = section.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      section.classList.add('show');
+    }
+  });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Auto-hide all alerts after 3 seconds
+  window.addEventListener('DOMContentLoaded', () => {
+    const alerts = document.querySelectorAll('.flash-container .alert');
+    alerts.forEach((alert) => {
+      setTimeout(() => {
+        // Bootstrap 5 alert close
+        const bsAlert = new bootstrap.Alert(alert);
+        bsAlert.close();
+      }, 3000);
+    });
+  });
+</script>
+</body>
+</html>

@@ -3,5 +3,6 @@ __pycache__/
 instance/
 *.pyc
 UserInfo.db
+
 static/*.jpg
 static/*.png

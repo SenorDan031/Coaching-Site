@@ -155,7 +155,7 @@ def StaffDash():
 def AdminDash():
     if 'user_id' in session:
         user = User.query.get(session['user_id'])   # 👈 get actual user
-        return f"Welcome to Dashboard 🎯 {user.User_name}"
+        return render_template('AdminDash.html', user=user)
     
     else :
         return redirect('/login')

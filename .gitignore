@@ -3,4 +3,5 @@ __pycache__/
 instance/
 *.pyc
 UserInfo.db
-static/Student.jpg
+static/*.jpg
+static/*.png

@@ -30,11 +30,7 @@ Features planned and implemented for students:
 * 💳 Fee Status
 * 📚 Course Information
 * 📝 Test Department
-* 📊 Marks Section
-* 🎥 Online Lectures
-
 ---
-
 # 👨‍🏫 Teacher Dashboard
 
 Teacher-side management features:
@@ -43,7 +39,8 @@ Teacher-side management features:
 * 📢 Post Announcements
 * 📝 Test Zone
 * 📚 Syllabus TODO Tracker
-* 📝 Upload Leave Requests 
+* 📝 Upload Leave Requests
+* 💰 Check for Salary 
 
 ---
 

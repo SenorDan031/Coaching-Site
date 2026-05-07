@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='Student.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="top-navbar">
+
+    <div class="logo">
+        🎓 S++
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#">Contact Staff</a>
+
+        <a href="/logout">Logout</a>
+
+        <a href="#">Profile</a>
+
+    </div>
+
+</nav>
+
+<!-- MAIN -->
+<div class="dashboard-container">
+
+    <!-- LEFT PANEL -->
+    <div class="left-panel">
+
+        <div class="student-card">
+
+            <img src="{{ url_for('static', filename='Student.jpg') }}" alt="Student">
+
+            <h3>{{user.User_name}}</h3>
+
+            <p>Class 12 PCM</p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div class="main-panel">
+
+        <!-- WELCOME -->
+        <div class="welcome-card">
+
+            <h1>Welcome Back {{user.User_name}} !</h1>
+
+            <p>
+                Track your academic journey, stay updated with announcements,
+                manage your learning experience and connect with your teachers all in one place. <br>
+                For any assistance, feel free to reach out to our support team. We're here to help you succeed!
+            </p>
+
+        </div>
+
+        <!-- QUICK ACCESS -->
+        <div class="quick-access">
+
+            <h2>Quick Access</h2>
+
+            <div class="menu-grid">
+
+                <a href="#" class="menu-box">
+                    📢
+                    <span>Announcements</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    📝
+                    <span>Tests</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    💳
+                    <span>Fees</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    👨‍🏫
+                    <span>Your Teachers</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+    <!-- RIGHT PANEL -->
+    
+</body>
+</html>

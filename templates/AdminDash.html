@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="top-navbar">
+
+    <div class="logo">
+        🎓 S++
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#">Contact Staff</a>
+
+        <a href="/logout">Logout</a>
+
+        <a href="#">Profile</a>
+
+    </div>
+
+</nav>
+
+<!-- MAIN -->
+<div class="dashboard-container">
+
+    <!-- LEFT -->
+    <div class="left-panel">
+
+        <div class="admin-card">
+
+            <img src="{{ url_for('static', filename='admin.png') }}" alt="Admin">
+
+            <h3>Admin Panel</h3>
+
+            <p>System Administrator</p>
+
+        </div>
+
+    </div>
+
+    <!-- RIGHT -->
+    <div class="main-panel">
+
+        <!-- WELCOME -->
+        <div class="welcome-card">
+
+            <h1>Control Center ⚙️</h1>
+
+            <p>
+                Manage institutional workflow, staff operations,
+                and system-wide activities.
+            </p>
+
+        </div>
+
+        <!-- QUICK ACCESS -->
+        <div class="quick-access">
+
+            <h2>Quick Access</h2>
+
+            <div class="menu-grid">
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-person-video3"></i>
+                    <span>Teachers List</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-people-fill"></i>
+                    <span>Staff List</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-mortarboard-fill"></i>
+                    <span>Student List</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-cash-stack"></i>
+                    <span>Fee Defaulters</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-file-earmark-text"></i>
+                    <span>Leave Requests</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-megaphone-fill"></i>
+                    <span>Announcements</span>
+                </a>
+
+                <a href="#" class="menu-box">
+                    <i class="bi bi-person-plus-fill"></i>
+                    <span>Registrations</span>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -136,16 +136,17 @@ def login():
 def StudentDash():
     if 'user_id' in session:
         user = User.query.get(session['user_id'])   # 👈 get actual user
-        return f"Welcome to Dashboard 🎯 {user.User_name}"
+        return render_template('StudentDash.html', user=user)
+    
     
     else :
         return redirect('/login')
 
-@app.route('/StaffDash')
+@app.route('/TeacherDash')
 def StaffDash():
     if 'user_id' in session:
         user = User.query.get(session['user_id'])   # 👈 get actual user
-        return f"Welcome to Dashboard 🎯 {user.User_name}"
+        return render_template('TeacherDash.html', user=user)
     
     else :
         return redirect('/login')
